@@ -1,0 +1,62 @@
+{
+  "name": "dsh-delete-sessions-ru",
+  "version": "0.2.2",
+  "description": "Добавляет в DeepSeek Harness настоящее «удаление сессии»: безвозвратно удаляет сессию из меню «…» в боковой панели (останавливает активность, снимает учёт рабочего пространства/архив/закрепление, удаляет кэш проекции и журнал сессии), а не только архивирует.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "screenshots.json",
+    "assets"
+  ],
+  "scripts": {
+    "test": "node --check lib/index.js && node --check lib/client.js"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "session",
+    "delete",
+    "удаление сессии"
+  ],
+  "license": "MIT",
+  "author": "linusteller",
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleXela17/dsh-delete-sessions-ru.git"
+  },
+  "homepage": "https://github.com/aleXela17/dsh-delete-sessions-ru#readme",
+  "bugs": {
+    "url": "https://github.com/aleXela17/dsh-delete-sessions-ru/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
