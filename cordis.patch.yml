@@ -1,0 +1,8 @@
+# Патч bundle dsh-delete-sessions-ru: вставляет одну строку в корень профиля.
+# При установке как bundle (`dsh plugin --profile desktop add <path>`) этот патч
+# применяется автоматически; при ручной установке нужно добавить такую же строку
+# в собственный cordis.patch.yml профиля (не добавляйте одновременно этот файл,
+# иначе плагин загрузится дважды и упадёт из-за конфликта id).
+- insert:
+    - id: dsh-delete-sessions-ru
+      name: 'dsh-delete-sessions-ru'
